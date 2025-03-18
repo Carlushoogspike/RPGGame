@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: net.bytes.projects.rpgmicro
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle_kotlin
+features: [ app-name, data, data-mongodb, github-workflow-ci, gradle, http-client-test, jackson-databind, java, java-application, junit, logback, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, properties, readme, redis-lettuce, shade, static-resources, test-resources ]

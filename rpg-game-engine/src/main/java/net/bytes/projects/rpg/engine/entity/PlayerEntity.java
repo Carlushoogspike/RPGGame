@@ -1,6 +1,9 @@
 package net.bytes.projects.rpg.engine.entity;
 
+import net.bytes.projects.rpg.engine.event.PlayerMoveEvent;
+import net.bytes.projects.rpg.engine.manager.EventManager;
 import net.bytes.projects.rpg.engine.utils.ImageUtils;
+import net.bytes.projects.rpg.engine.world.WorldPosition;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -12,18 +15,19 @@ import java.util.Objects;
 
 public class PlayerEntity extends JLabel implements MovableEntity {
 
-    private final ImageIcon originalIcon;
     private final BufferedImage copyIcon;
+    private final WorldPosition position;
 
     public PlayerEntity() throws IOException {
         URL imageURL = Objects.requireNonNull(getClass().getResource("/art/base.png"));
         this.copyIcon = ImageIO.read(imageURL);
 
-        this.originalIcon = new ImageIcon(imageURL);
+        ImageIcon originalIcon = new ImageIcon(imageURL);
         setSize(originalIcon.getIconWidth(), originalIcon.getIconHeight());
         setLocation(0, 0);
         setIcon(originalIcon);
 
+        this.position = new WorldPosition(0, 0);
     }
 
     @Override
@@ -55,8 +59,8 @@ public class PlayerEntity extends JLabel implements MovableEntity {
     }
 
     @Override
-    public void onAction() {
-
+    public WorldPosition getPosition() {
+        return position;
     }
 
     @Override
@@ -85,22 +89,30 @@ public class PlayerEntity extends JLabel implements MovableEntity {
     }
 
     private void calculateLocation(Pos pos) {
+        int oldX = getX();
+        int oldY = getY();
+
         switch (pos) {
             case UP:
                 setLocation(getX(), getY() - 5);
+                position.add(0, 5);
                 break;
             case DOWN:
                 setLocation(getX(), getY() + 5);
+                position.subtract(0, 5);
                 break;
             case LEFT:
                 setLocation(getX() - 5, getY());
+                position.subtract(5, 0);
                 break;
             case RIGHT:
                 setLocation(getX() + 5, getY());
+                position.add(5, 0);
                 break;
         }
-    }
 
+        EventManager.callEvent(new PlayerMoveEvent(oldX, oldY, getX(), getY()));
+    }
 
     private enum Pos {
         UP, DOWN, LEFT, RIGHT

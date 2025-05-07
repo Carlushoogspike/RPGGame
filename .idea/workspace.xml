@@ -5,21 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2189e6b9-1fec-4c14-a430-8a6b3c36bb93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/RPGLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/entity/MovableEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/entity/PlayerEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/utils/ImageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/windows/GameWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/resources/art/attack_sprite_viking-sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/resources/art/base.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/resources/art/death_gif-sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/resources/art/idle_viking_mini_-sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/resources/art/walk_cycle_animation-sheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/event/PlayerMoveEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/listener/PlayerMovementListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/manager/EventManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/manager/EventRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/manager/EventTickChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/manager/Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/world/WorldPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/classes/java/main/net/bytes/projects/rpg/engine/RPGLauncher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/classes/java/main/net/bytes/projects/rpg/engine/entity/PlayerEntity$Pos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/classes/java/main/net/bytes/projects/rpg/engine/entity/PlayerEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/classes/java/main/net/bytes/projects/rpg/engine/entity/SkeletonEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/classes/java/main/net/bytes/projects/rpg/engine/utils/ImageUtils$ImageRotate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/classes/java/main/net/bytes/projects/rpg/engine/utils/ImageUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/classes/java/main/net/bytes/projects/rpg/engine/windows/GameWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/resources/main/art/attack_sprite_viking-sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/resources/main/art/base.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/resources/main/art/death_gif-sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/resources/main/art/idle_viking_mini_-sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/resources/main/art/walk_cycle_animation-sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/tmp/compileJava/compileTransaction/stash-dir/ImageUtils$ImageRotate.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/tmp/compileJava/compileTransaction/stash-dir/ImageUtils.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/tmp/compileJava/compileTransaction/stash-dir/PlayerEntity$Pos.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/tmp/compileJava/compileTransaction/stash-dir/PlayerEntity.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/RPGLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/RPGLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/entity/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/entity/MovableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/entity/PlayerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpg-game-engine/src/main/java/net/bytes/projects/rpg/engine/entity/PlayerEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +153,7 @@
       <recent name="net.bytes.projects.rpg.microservice.driver" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.bytes.projects.rpg.engine.manager" />
       <recent name="net.bytes.projects.rpg.config.data" />
     </key>
   </component>
@@ -204,6 +226,8 @@
       <workItem from="1742661276282" duration="769000" />
       <workItem from="1742677003366" duration="4800000" />
       <workItem from="1742693472188" duration="184000" />
+      <workItem from="1743215915605" duration="1470000" />
+      <workItem from="1743258396256" duration="53000" />
     </task>
     <servers />
   </component>

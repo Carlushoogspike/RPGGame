@@ -1,5 +1,7 @@
 package net.bytes.projects.rpg.engine.entity;
 
+import net.bytes.projects.rpg.engine.world.WorldPosition;
+
 import java.awt.event.KeyListener;
 
 public interface MovableEntity extends KeyListener {
@@ -12,6 +14,5 @@ public interface MovableEntity extends KeyListener {
 
     void onRight();
 
-    void onAction();
-
+    WorldPosition getPosition();
 }
